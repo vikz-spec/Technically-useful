@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #0f1220;
+    color: white;
+    text-align: center;
+}
+
+input,
+button {
+    padding: 10px;
+    margin: 6px;
+    font-size: 1rem;
+}
+
+button {
+    background: #39ff14;
+    border: none;
+    cursor: pointer;
+}
+
+#timerBar {
+    height: 6px;
+    background: #39ff14;
+    margin: 10px;
+    width: 100%;
+}
+
+#chat {
+    background: #111;
+    max-height: 150px;
+    overflow-y: auto;
+    margin: 10px;
+    padding: 6px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}

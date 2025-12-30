@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Technically Useful</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div id="home-room">
+        <h1>Technically Useful</h1>
+        <input id="username" placeholder="Username" />
+        <button id="create">Create Lobby</button>
+        <input id="codeInput" placeholder="Lobby Code" />
+        <button id="join">Join Lobby</button>
+    </div>
+
+    <div id="settings-room" hidden>
+        <h2>Host Settings</h2>
+
+        <p>Select what kind of powers can appear:</p>
+        <div id="categories">
+            <label><input type="checkbox" value="Physical" checked> Physical</label>
+            <label><input type="checkbox" value="Mental" checked> Mental</label>
+            <label><input type="checkbox" value="Weird" checked> Weird</label>
+        </div>
+
+        <p>Round timer (seconds)</p>
+        <input id="timer" type="number" min="10" value="30" />
+
+        <button id="start">Start Game</button>
+    </div>
+
+    <div id="game-room" hidden>
+        <h2 id="power">🧩 Power:</h2>
+        <h3 id="turn"></h3>
+
+        <div id="timerBar"></div>
+
+        <input id="answer" placeholder="Make it worse..." />
+        <button id="submit">Submit</button>
+
+        <div id="chat"></div>
+        <input id="chatInput" placeholder="Chat..." />
+
+        <ul id="scoreboard"></ul>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+
+</html>
