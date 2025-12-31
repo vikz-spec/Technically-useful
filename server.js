@@ -7,10 +7,16 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-// Serve frontend
+// Serve static files
 app.use(express.static(path.join(__dirname, "public")));
 
+// Explicit root route
 app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
+// ✅ CATCH-ALL (THIS FIXES "Not Found")
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
